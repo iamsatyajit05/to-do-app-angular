@@ -1,22 +1,7 @@
-<div class="navbar">
-  <div class="current-time">
-    <b>Current Time: </b> <span id="current-time">{{ currentTime }}</span>
-  </div>
-</div>
+<app-navbar></app-navbar>
 
-<div class="container">
-  <h1>To-Do List</h1>
-  <form id="todo-form" (ngSubmit)="addTodo()">
-    <input type="text" id="todo-input" name="todo-input" placeholder="Enter a task" [(ngModel)]="todoInput">
-    <button type="submit">Add</button>
-  </form>
-  <ul id="todo-list">
-    <li *ngFor="let todo of todos">
-      <label class="checkbox-label" (change)="toggleTodoCompletion(todo)">
-        <input type="checkbox" [(ngModel)]="todo.completed" hidden>
-        <span [ngClass]="{'completed': todo.completed}">{{ todo.text }}</span>
-      </label>
-      <button (click)="deleteTodo(todo)">Delete</button>
-    </li>
-  </ul>
+<div class="main-app">
+  <app-todo></app-todo>
+  <app-pomodoro></app-pomodoro>
+  <app-quotewall></app-quotewall>
 </div>

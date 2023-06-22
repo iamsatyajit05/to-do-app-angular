@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "to-do-app": {
+    "productive-hub": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/to-do-app",
+            "outputPath": "dist/productive-hub",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": [
@@ -60,10 +60,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "to-do-app:build:production"
+              "browserTarget": "productive-hub:build:production"
             },
             "development": {
-              "browserTarget": "to-do-app:build:development"
+              "browserTarget": "productive-hub:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -71,7 +71,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "to-do-app:build"
+            "browserTarget": "productive-hub:build"
           }
         },
         "test": {

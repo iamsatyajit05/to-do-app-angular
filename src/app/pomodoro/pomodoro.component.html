@@ -1,0 +1,20 @@
+<div class="pomodoro">
+    <h1>Pomodoro</h1>
+    <div id="message" *ngIf="showMessage">
+        <span>{{ message }}</span>
+        <span (click)="messageClear()">OK</span>
+    </div>
+    <div id="main">
+        <p id="timer">{{ timer }}</p>
+        <div id="btns">
+            <div>
+                <button *ngIf="startBtnVisible" id="startBtn" (click)="start()">Start</button>
+                <button *ngIf="pauseBtnVisible" id="pauseBtn" (click)="pause()">Pause</button>
+                <button *ngIf="resumeBtnVisible" id="resumeBtn" (click)="resume()">Resume</button>
+            </div>
+            <div>
+                <button id="resetBtn" (click)="reset()">Reset</button>
+            </div>
+        </div>
+    </div>
+</div>
